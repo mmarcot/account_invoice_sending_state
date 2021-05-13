@@ -6,7 +6,7 @@
 		<field name="inherit_id" ref="account.view_invoice_tree"/>
 		<field name="arch" type="xml">
 			<xpath expr="//field[@name='invoice_payment_state']" position="after">
-				<field name="invoice_sent_state" optional="show"/>
+				<field name="invoice_sending_state" optional="show"/>
 			</xpath>
 		</field>
 	</record>
@@ -18,7 +18,7 @@
 		<field name="arch" type="xml">
 			<xpath expr="//filter[@name='late']" position="after">
 				<separator/>
-				<filter name="invoice_not_sent" string="Invoice not sent" domain="[('invoice_sent', '=', False)]"/>
+				<filter name="invoice_not_sent" string="Not sent" domain="[('invoice_sent', '=', False)]"/>
 			</xpath>
 		</field>
 	</record>

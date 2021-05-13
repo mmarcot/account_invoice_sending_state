@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "account_invoice_sent_state",
+    'name': "account_invoice_sending_state",
     'description': """
-        account_invoice_sent_state
+        account_invoice_sending_state
     """,
     'author': "Mallory MARCOT contact@mallory-marcot.com",
     'website': "https://www.mallory-marcot.com",
@@ -10,7 +10,6 @@
     'version': '13.0.1',
     'depends': ['account'],
     'data': [
-        # 'security/ir.model.access.csv',
         'views/account_move_views.xml',
     ],
 }
