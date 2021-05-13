@@ -1,0 +1,27 @@
+<odoo>
+<data>
+	<record model="ir.ui.view" id="view_invoice_tree">
+		<field name="name">account.invoice.tree</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_invoice_tree"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='invoice_payment_state']" position="after">
+				<field name="invoice_sent_state" optional="show"/>
+			</xpath>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_account_invoice_filter">
+		<field name="name">account.invoice.select</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_account_invoice_filter"/>
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='late']" position="after">
+				<separator/>
+				<filter name="invoice_not_sent" string="Invoice not sent" domain="[('invoice_sent', '=', False)]"/>
+			</xpath>
+		</field>
+	</record>
+
+</data>
+</odoo>
