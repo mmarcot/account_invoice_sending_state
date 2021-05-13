@@ -1,7 +1,7 @@
 # account_invoice_sending_state
 Odoo module to display the sending state on invoices
 
-![Module overview](https://github.com/mmarcot/account_invoice_sending_state/blob/13.0/static/src/img/tree_view.png?raw=true)
+![Module overview](https://github.com/mmarcot/account_invoice_sending_state/blob/13.0/static/src/img/overview.png?raw=true)
 
 # Features
     - Add new field to display the sending state on invoices tree view
