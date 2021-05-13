@@ -5,8 +5,8 @@
 		<field name="model">account.move</field>
 		<field name="inherit_id" ref="account.view_invoice_tree"/>
 		<field name="arch" type="xml">
-			<xpath expr="//field[@name='invoice_payment_state']" position="after">
-				<field name="invoice_sending_state" optional="show"/>
+			<xpath expr="//field[@name='payment_state']" position="before">
+				<field name="invoice_sending_state" optional="show" widget="badge" decoration-danger="invoice_sending_state == 'not_sent'" decoration-success="invoice_sending_state == 'sent'"/>
 			</xpath>
 		</field>
 	</record>
@@ -18,7 +18,7 @@
 		<field name="arch" type="xml">
 			<xpath expr="//filter[@name='late']" position="after">
 				<separator/>
-				<filter name="invoice_not_sent" string="Not sent" domain="[('invoice_sent', '=', False)]"/>
+				<filter name="invoice_not_sent" string="Not sent" domain="[('is_move_sent', '=', False)]"/>
 			</xpath>
 		</field>
 	</record>

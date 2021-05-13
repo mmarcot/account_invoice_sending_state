@@ -7,7 +7,7 @@
     'author': "Mallory MARCOT contact@mallory-marcot.com",
     'website': "https://www.mallory-marcot.com",
     'category': 'Invoicing',
-    'version': '13.0.1',
+    'version': '14.0.1',
     'depends': ['account'],
     'data': [
         'views/account_move_views.xml',

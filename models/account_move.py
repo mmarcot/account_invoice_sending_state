@@ -13,4 +13,4 @@ class AccountMove(models.Model):
 
     def _compute_invoice_sending_state(self):
         for record in self:
-            record.invoice_sending_state = 'sent' if record.invoice_sent else 'not_sent'
+            record.invoice_sending_state = 'sent' if record.is_move_sent else 'not_sent'
